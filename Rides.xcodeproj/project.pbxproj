@@ -14,6 +14,12 @@
 		7E2D926729CD5AEF008900EE /* RidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D926629CD5AEF008900EE /* RidesTests.swift */; };
 		7E2D927129CD5AEF008900EE /* RidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D927029CD5AEF008900EE /* RidesUITests.swift */; };
 		7E2D927329CD5AEF008900EE /* RidesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D927229CD5AEF008900EE /* RidesUITestsLaunchTests.swift */; };
+		7E2D928229CD5D4A008900EE /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D928129CD5D4A008900EE /* Vehicle.swift */; };
+		7E2D928529CD61F4008900EE /* VehicleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D928429CD61F4008900EE /* VehicleRow.swift */; };
+		7E2D928729CD6B84008900EE /* DynamicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D928629CD6B84008900EE /* DynamicList.swift */; };
+		7E2D928929CD6E31008900EE /* VehicleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D928829CD6E31008900EE /* VehicleList.swift */; };
+		7E2D928B29CD721E008900EE /* VehicleDetail1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D928A29CD721E008900EE /* VehicleDetail1.swift */; };
+		7E2D928E29CD7F67008900EE /* API service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D928D29CD7F67008900EE /* API service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,13 @@
 		7E2D926C29CD5AEF008900EE /* RidesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RidesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2D927029CD5AEF008900EE /* RidesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesUITests.swift; sourceTree = "<group>"; };
 		7E2D927229CD5AEF008900EE /* RidesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7E2D927F29CD5B81008900EE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7E2D928129CD5D4A008900EE /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		7E2D928429CD61F4008900EE /* VehicleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRow.swift; sourceTree = "<group>"; };
+		7E2D928629CD6B84008900EE /* DynamicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicList.swift; sourceTree = "<group>"; };
+		7E2D928829CD6E31008900EE /* VehicleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleList.swift; sourceTree = "<group>"; };
+		7E2D928A29CD721E008900EE /* VehicleDetail1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetail1.swift; sourceTree = "<group>"; };
+		7E2D928D29CD7F67008900EE /* API service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API service.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +107,14 @@
 		7E2D925429CD5AED008900EE /* Rides */ = {
 			isa = PBXGroup;
 			children = (
+				7E2D928C29CD7F30008900EE /* API service */,
+				7E2D928329CD61B8008900EE /* Views */,
+				7E2D928029CD5D2E008900EE /* Models */,
 				7E2D925529CD5AED008900EE /* RidesApp.swift */,
 				7E2D925729CD5AED008900EE /* ContentView.swift */,
 				7E2D925929CD5AEF008900EE /* Assets.xcassets */,
 				7E2D925B29CD5AEF008900EE /* Preview Content */,
+				7E2D927F29CD5B81008900EE /* README.md */,
 			);
 			path = Rides;
 			sourceTree = "<group>";
@@ -125,6 +142,33 @@
 				7E2D927229CD5AEF008900EE /* RidesUITestsLaunchTests.swift */,
 			);
 			path = RidesUITests;
+			sourceTree = "<group>";
+		};
+		7E2D928029CD5D2E008900EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E2D928129CD5D4A008900EE /* Vehicle.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7E2D928329CD61B8008900EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E2D928429CD61F4008900EE /* VehicleRow.swift */,
+				7E2D928629CD6B84008900EE /* DynamicList.swift */,
+				7E2D928829CD6E31008900EE /* VehicleList.swift */,
+				7E2D928A29CD721E008900EE /* VehicleDetail1.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E2D928C29CD7F30008900EE /* API service */ = {
+			isa = PBXGroup;
+			children = (
+				7E2D928D29CD7F67008900EE /* API service.swift */,
+			);
+			path = "API service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E2D928929CD6E31008900EE /* VehicleList.swift in Sources */,
+				7E2D928B29CD721E008900EE /* VehicleDetail1.swift in Sources */,
+				7E2D928229CD5D4A008900EE /* Vehicle.swift in Sources */,
 				7E2D925829CD5AED008900EE /* ContentView.swift in Sources */,
 				7E2D925629CD5AED008900EE /* RidesApp.swift in Sources */,
+				7E2D928529CD61F4008900EE /* VehicleRow.swift in Sources */,
+				7E2D928729CD6B84008900EE /* DynamicList.swift in Sources */,
+				7E2D928E29CD7F67008900EE /* API service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
