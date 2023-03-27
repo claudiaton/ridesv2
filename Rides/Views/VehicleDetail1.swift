@@ -13,12 +13,16 @@ struct VehicleDetail1: View {
     
     var body: some View {
         VStack{
-            
-        }
-        Spacer()
-        Text("")
+            Spacer()
+            Text("Make and model: " + vehicle.makeAndModel)
+            Text("Color: " + vehicle.color)
+            Text("Car type: " + vehicle.carType)
+            Spacer()
             .navigationTitle(vehicle.vin)
-            .navigationBarTitleDisplayMode(.inline)
+            .multilineTextAlignment(.center)
+            .padding()
+        }
+
     }
 }
 

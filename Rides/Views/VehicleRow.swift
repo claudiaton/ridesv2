@@ -13,7 +13,7 @@ struct VehicleRow: View {
     
     var body: some View {
 //        HStack {
-//            Image()
+//            Image()               // For User experience it would be nice to have more images
 //                .resizable()
 //                .padding()
 //                .frame(width:80, height:80)

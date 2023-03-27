@@ -17,7 +17,16 @@ struct Vehicle: Codable, Hashable, Identifiable {
     var carType: String
     let kilometrage: Int
 
+    enum CodingKeys: String, CodingKey {
+        case vin
+        case color
+        case kilometrage
+        case makeAndModel = "make_and_model"
+        case carType = "car_type"
+    }
 }
+
+
 
 extension Vehicle {
     static func dummy_data()->[Vehicle]{
@@ -28,29 +37,29 @@ extension Vehicle {
     }
 }
 
-class APIService: ObservableObject {
-
-    @Published var vehicle: [Vehicle] = []
-    @Published var size: String = "1"
-
-
-    func load(_ size: String) {
-        guard let url = URL(string: "https://random-data-api.com/api/vehicle/random_vehicle?size=" + size) else {return}
-
-        let task = URLSession.shared.dataTask(with: url) {[weak self] data, _, error in
-            guard let data = data, error == nil else {return}
-            
-            do {
-                let decodedLists = try JSONDecoder().decode([Vehicle].self, from: data)
-                    DispatchQueue.main.async {
-                        self?.vehicle = decodedLists
-                    }
-                } catch {
-                print ("Error")
-            }
-
-        }
-        task.resume()
-
-    }
-}
+//class APIService: ObservableObject {
+//
+//    @Published var vehicle: [Vehicle] = []
+////    @Published var size: String = "1"
+//
+//
+//    func load(_ size: String) {
+//        guard let url = URL(string: "https://random-data-api.com/api/vehicle/random_vehicle?size=" + size) else {return}
+//
+//        let task = URLSession.shared.dataTask(with: url) {[weak self] data, _, error in
+//            guard let data = data, error == nil else {return}
+//            
+//            do {
+//                let decodedLists = try JSONDecoder().decode([Vehicle].self, from: data)
+//                    DispatchQueue.main.async {
+//                        self?.vehicle = decodedLists
+//                    }
+//                } catch {
+//                print ("Error")
+//            }
+//
+//        }
+//        task.resume()
+//
+//    }
+//}
