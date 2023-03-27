@@ -28,6 +28,10 @@ struct VehicleList: View {
                         NavigationLink(destination: VehicleDetail1(vehicle: item),
                                        label: {VehicleRow(vehicle: item)
                         })
+                        //  .swipeActions{Button("CO2"){
+                        //     NavigationLink(destination: VehicleDetail2(vehicle: item),
+                        //     label: {VehicleRow(vehicle: item)
+                        //   })
                     }
                     .navigationBarTitle(Text("Rides list"))
                     .onAppear {
