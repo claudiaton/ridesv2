@@ -24,7 +24,6 @@ class ViewModel: ObservableObject {
             //convert to JSON
             do {
                 let vehicles = try JSONDecoder().decode([Vehicle].self, from: data)
-                print(vehicles)
                 DispatchQueue.main.async {
                     self?.vehicles = vehicles
                 }

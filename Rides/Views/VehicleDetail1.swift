@@ -4,8 +4,7 @@
 //
 //  Created by Claudia Ton on 2023-03-24.
 //
-
-import SwiftUI
+ import SwiftUI
 
 struct VehicleDetail1: View {
     
@@ -18,11 +17,10 @@ struct VehicleDetail1: View {
             Text("Color: " + vehicle.color)
             Text("Car type: " + vehicle.carType)
             Spacer()
-            .navigationTitle(vehicle.vin)
-            .multilineTextAlignment(.center)
-            .padding()
+                .navigationTitle(vehicle.vin)
+                .multilineTextAlignment(.center)
+                .padding()
         }
-
     }
 }
 

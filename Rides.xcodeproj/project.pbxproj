@@ -19,6 +19,8 @@
 		7E2D928929CD6E31008900EE /* VehicleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D928829CD6E31008900EE /* VehicleList.swift */; };
 		7E2D928B29CD721E008900EE /* VehicleDetail1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D928A29CD721E008900EE /* VehicleDetail1.swift */; };
 		7E2D929429D1F3C5008900EE /* VehicleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D929329D1F3C5008900EE /* VehicleListViewModel.swift */; };
+		7E2D929729D2301F008900EE /* VehicleDetail2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D929629D2301F008900EE /* VehicleDetail2.swift */; };
+		7E2D929929D31FC6008900EE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D929829D31FC6008900EE /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		7E2D928829CD6E31008900EE /* VehicleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleList.swift; sourceTree = "<group>"; };
 		7E2D928A29CD721E008900EE /* VehicleDetail1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetail1.swift; sourceTree = "<group>"; };
 		7E2D929329D1F3C5008900EE /* VehicleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModel.swift; sourceTree = "<group>"; };
+		7E2D929629D2301F008900EE /* VehicleDetail2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetail2.swift; sourceTree = "<group>"; };
+		7E2D929829D31FC6008900EE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 				7E2D929529D22219008900EE /* VehicleList */,
 				7E2D928429CD61F4008900EE /* VehicleRow.swift */,
 				7E2D928A29CD721E008900EE /* VehicleDetail1.swift */,
+				7E2D929629D2301F008900EE /* VehicleDetail2.swift */,
+				7E2D929829D31FC6008900EE /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,9 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E2D928929CD6E31008900EE /* VehicleList.swift in Sources */,
+				7E2D929929D31FC6008900EE /* DetailView.swift in Sources */,
 				7E2D928B29CD721E008900EE /* VehicleDetail1.swift in Sources */,
 				7E2D928229CD5D4A008900EE /* Vehicle.swift in Sources */,
 				7E2D925829CD5AED008900EE /* ContentView.swift in Sources */,
+				7E2D929729D2301F008900EE /* VehicleDetail2.swift in Sources */,
 				7E2D929429D1F3C5008900EE /* VehicleListViewModel.swift in Sources */,
 				7E2D925629CD5AED008900EE /* RidesApp.swift in Sources */,
 				7E2D928529CD61F4008900EE /* VehicleRow.swift in Sources */,
@@ -470,6 +478,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,6 +507,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

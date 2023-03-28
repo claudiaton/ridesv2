@@ -25,13 +25,9 @@ struct VehicleList: View {
                 
                     List(viewModel.orderVehicles(orderByType: orderByType)){
                         item in
-                        NavigationLink(destination: VehicleDetail1(vehicle: item),
+                        NavigationLink(destination: DetailView(vehicle: item),
                                        label: {VehicleRow(vehicle: item)
                         })
-                        //  .swipeActions{Button("CO2"){
-                        //     NavigationLink(destination: VehicleDetail2(vehicle: item),
-                        //     label: {VehicleRow(vehicle: item)
-                        //   })
                     }
                     .navigationBarTitle(Text("Rides list"))
                     .onAppear {

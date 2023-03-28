@@ -31,10 +31,13 @@ import SwiftUI
 struct ContentView: View {
     @State var showNextView = false
     @State var size: String = "0"
-    @State private var showingAlert = false
+    @State private var showAlert = false
     @State var intSize: Int = 0
     
-    
+    func sizeValidation (intSize: Int ) -> Bool {
+        if (intSize > 0 && intSize <= 100) {return true}
+        else {return false}
+    }
     
     var body: some View {
         NavigationView {
@@ -57,12 +60,12 @@ struct ContentView: View {
                                        isActive: $showNextView) {
                         
                         Button(action: {
-                            if (intSize > 0 && intSize <= 100) {showNextView = true}
-                            else {showingAlert = true}
+                            if(sizeValidation(intSize: intSize)){showNextView = true}
+                            else {showAlert = true} // TBD Clear input with Alert
                         }) {
                             Text("Submit")
                         }
-                        .alert (isPresented:$showingAlert) {
+                        .alert (isPresented:$showAlert) {
                             Alert (
                                 title: Text ("Input value is not valid"),
                                 message: Text ("Please inform a value between 1 and 100."),
