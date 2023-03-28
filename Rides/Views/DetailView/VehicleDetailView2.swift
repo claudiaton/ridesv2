@@ -8,24 +8,16 @@
 
 import SwiftUI
 
-struct VehicleDetail2: View {
+struct VehicleDetailView2: View {
     
     var vehicle: Vehicle
-    func computeCarbon(kilometrage: Int)->Int{
-        var result: Int
-        result = kilometrage
-        if(kilometrage > 5000){
-            result += (kilometrage - 5000)/2
-        }
-        
-        return result
-    }
+    @StateObject private var viewModel = DetailViewModel()
     
     var body: some View {
         VStack{
             Spacer()
             Text("Kilometrage: " + String(vehicle.kilometrage))
-            Text("Estimated carbon emission: " + String(computeCarbon(kilometrage: vehicle.kilometrage)))
+            Text("Estimated carbon emission: " + String(viewModel.computeCarbon(kilometrage: vehicle.kilometrage)))
             Spacer()
             .navigationTitle(vehicle.vin)
             .multilineTextAlignment(.center)

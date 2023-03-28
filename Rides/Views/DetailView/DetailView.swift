@@ -13,8 +13,8 @@ struct DetailView: View {
     
     var body: some View {
         TabView{
-            VehicleDetail1(vehicle: vehicle)
-            VehicleDetail2(vehicle: vehicle)
+            VehicleDetailView1(vehicle: vehicle)
+            VehicleDetailView2(vehicle: vehicle)
         }
         
         

@@ -7,31 +7,31 @@
 
 import SwiftUI
 
-struct VehicleList: View {
+struct VehicleListView: View {
+    var vehicles : [Vehicle]
+//    var size : String
     
-    var size : String
-    @State var orderByType: Bool = false
-    @StateObject var viewModel = ViewModel()
-    @State var ListToDisplay = []
+    @StateObject private var viewModel = VehicleListViewModel()
     
     var body: some View {
         
             NavigationView{
                 
                 VStack {
-                    Toggle("Order by type", isOn: $orderByType)
+                    Toggle("Order by type", isOn: $viewModel.orderByType)
                     .toggleStyle(.button)
                     .tint(.blue)
                 
-                    List(viewModel.orderVehicles(orderByType: orderByType)){
+                    List(viewModel.orderVehicles(vehicles: vehicles)){
                         item in
                         NavigationLink(destination: DetailView(vehicle: item),
-                                       label: {VehicleRow(vehicle: item)
+                                       label: {VehicleRowView(vehicle: item)
                         })
                     }
                     .navigationBarTitle(Text("Rides list"))
                     .onAppear {
-                        viewModel.fetch(size: size)
+//                        viewModel.orderVehicles(vehicles: vehicles)
+//                        viewModel.fetch(size: size)
                     }
                 }
             }

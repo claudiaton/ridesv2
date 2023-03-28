@@ -6,7 +6,7 @@
 //
  import SwiftUI
 
-struct VehicleDetail1: View {
+struct VehicleDetailView1: View {
     
     var vehicle: Vehicle
     

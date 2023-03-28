@@ -9,10 +9,10 @@ import XCTest
 @testable import Rides
 
 final class InputValidationTests: XCTestCase {
-    private var sut: ContentView!
+    private var sut: InitialViewModel!
   
     override func setUpWithError() throws {
-        sut = ContentView()
+        sut = InitialViewModel()
     }
 
     override func tearDownWithError() throws {
@@ -20,19 +20,19 @@ final class InputValidationTests: XCTestCase {
     }
 
     func test_input10_returnsTrue() {
-        let actual = sut.sizeValidation(intSize: 10)
+        let actual = sut.sizeValidation(size: 10)
         let expected = true
         XCTAssertEqual(actual, expected)
     }
     
     func test_input0_returnsFalse() {
-        let actual = sut.sizeValidation(intSize: 0)
+        let actual = sut.sizeValidation(size: 0)
         let expected = false
         XCTAssertEqual(actual, expected)
     }
     
     func test_input101_returnsFalse() {
-        let actual = sut.sizeValidation(intSize: 101)
+        let actual = sut.sizeValidation(size: 101)
         let expected = false
         XCTAssertEqual(actual, expected)
     }
@@ -40,11 +40,11 @@ final class InputValidationTests: XCTestCase {
 }
 
 final class ComputeCarbonTests: XCTestCase {
-    private var sut: VehicleDetail2!
-    private var vehicle:Vehicle = Vehicle(vin: "4PJVMAABPYPP93821", makeAndModel:"Buick Encore", color:"Red", carType: "Coupe", kilometrage:63775)
+    private var sut: DetailViewModel!
+//    private var vehicle:Vehicle = Vehicle(vin: "4PJVMAABPYPP93821", makeAndModel:"Buick Encore", color:"Red", carType: "Coupe", kilometrage:63775)
   
     override func setUpWithError() throws {
-        sut = VehicleDetail2(vehicle: vehicle)
+        sut = DetailViewModel()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
