@@ -28,14 +28,14 @@ struct Vehicle: Codable, Hashable, Identifiable {
 
 
 
-extension Vehicle {
-    static func dummy_data()->[Vehicle]{
-        return[
-            Vehicle(vin: "4PJVMAABPYPP93821", makeAndModel:"Buick Encore", color:"Red", carType: "Coupe", kilometrage:63775),
-            Vehicle(vin: "0RTPLSTS6LPP63704", makeAndModel:"Honda Accord", color:"Beige", carType: "SUV", kilometrage:86364),
-        ].shuffled()
-    }
-}
+//extension Vehicle {
+//    static func dummy_data()->[Vehicle]{
+//        return[
+//            Vehicle(vin: "4PJVMAABPYPP93821", makeAndModel:"Buick Encore", color:"Red", carType: "Coupe", kilometrage:63775),
+//            Vehicle(vin: "0RTPLSTS6LPP63704", makeAndModel:"Honda Accord", color:"Beige", carType: "SUV", kilometrage:86364),
+//        ].shuffled()
+//    }
+//}
 
 //class APIService: ObservableObject {
 //

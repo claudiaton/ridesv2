@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VehicleRow: View {
+struct VehicleRowView: View {
     
     var vehicle: Vehicle
     

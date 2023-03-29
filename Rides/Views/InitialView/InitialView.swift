@@ -5,35 +5,11 @@
 //  Created by Claudia Ton on 2023-03-24.
 //
 
-//import SwiftUI
-//
-//struct ContentView: View {
-//    var body: some View {
-//        VStack {
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundColor(.accentColor)
-//            Text("Hello, world!")
-//        }
-//        .padding()
-//    }
-//}
-//
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
-
 import Foundation
 import SwiftUI
 
-struct ContentView: View {
-    @State var showNextView = false
-    @State var size: String = "0"
-    @State private var showingAlert = false
-    @State var intSize: Int = 0
-    
+struct InitialView: View {
+    @StateObject private var viewModel = InitialViewModel()
     
     
     var body: some View {
@@ -45,7 +21,7 @@ struct ContentView: View {
                     VStack {
                         Text("Inform how many rides would you like to see: ")
 
-                        TextField("", text: $size)
+                        TextField("Size", text: $viewModel.size)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: 250, height: 40, alignment: .center)
 //                            .background(Color.gray.opacity(0.5).cornerRadius(20))
@@ -53,16 +29,20 @@ struct ContentView: View {
                                 
                             .font(.headline)
                         
-                        NavigationLink(destination: VehicleList(size: size),
-                                       isActive: $showNextView) {
+                        NavigationLink(destination: VehicleListView(vehicles: viewModel.vehicles),
+                                       isActive: $viewModel.showNextView) {
                         
                         Button(action: {
-                            if (intSize > 0 && intSize <= 100) {showNextView = true}
-                            else {showingAlert = true}
+                            if(viewModel.sizeValidation(size: viewModel.intSize)){
+                                viewModel.fetch()
+                                viewModel.showNextView = true}
+                            else {
+                                viewModel.size=""
+                                viewModel.showAlert = true}
                         }) {
                             Text("Submit")
                         }
-                        .alert (isPresented:$showingAlert) {
+                        .alert (isPresented:$viewModel.showAlert) {
                             Alert (
                                 title: Text ("Input value is not valid"),
                                 message: Text ("Please inform a value between 1 and 100."),
@@ -70,8 +50,8 @@ struct ContentView: View {
                             )
                         }
                     }
-                    .onChange(of: size) {_ in
-                        intSize = Int(size) ?? 0
+                        .onChange(of: viewModel.size) {_ in
+                        viewModel.intSize = Int(viewModel.size) ?? 0
                     }
                     
                 }

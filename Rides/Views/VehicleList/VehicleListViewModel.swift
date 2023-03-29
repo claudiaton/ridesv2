@@ -7,37 +7,12 @@
 
 import SwiftUI
 
-class ViewModel: ObservableObject {
-    @Published var vehicles: [Vehicle] = []
+class VehicleListViewModel: ObservableObject {
     
-    func fetch(size: String){
-        guard let url = URL(string:"https://random-data-api.com/api/vehicle/random_vehicle?size=" + size) else {
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            guard let data = data,
-                  error == nil
-            else {
-                return
-            }
-            //convert to JSON
-            do {
-                let vehicles = try JSONDecoder().decode([Vehicle].self, from: data)
-                print(vehicles)
-                DispatchQueue.main.async {
-                    self?.vehicles = vehicles
-                }
-            }
-            catch {
-                print (error)
-            }
-        }
-        task.resume()
-    }
+    @Published var orderByType: Bool = false
+    @Published var ListToDisplay = []
     
-    
-    func orderVehicles(orderByType: Bool) -> [Vehicle] {
+    func orderVehicles(vehicles: [Vehicle]) -> [Vehicle] {
         var ListToDisplay = vehicles
         if(orderByType) {
             ListToDisplay = vehicles.sorted(by: {(veh0, veh1)-> Bool in return veh0.carType < veh1.carType})

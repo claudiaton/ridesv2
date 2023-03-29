@@ -11,8 +11,7 @@ import SwiftUI
 struct RidesApp: App {
     var body: some Scene {
         WindowGroup {
-//            VehicleList()
-            ContentView()
+            InitialView()
         }
     }
 }
