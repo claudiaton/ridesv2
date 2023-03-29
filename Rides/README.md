@@ -29,7 +29,7 @@ Requirements have been completed.
 5. When your assignment is complete push your code to your public Github 
 repository and notify your hiring manager. 
   
-Base Requirements   
+## Base Requirements   
 Using git, create a new branch named feature/base_requirements and 
 implement the following:  
   
@@ -60,7 +60,8 @@ navigate to a Vehicle Details screen
   
 Using git, commit your work to branch 
 feature/base_requirements and push to your remote repository 
-Additional Requirements   
+
+## Additional Requirements   
  
 Using git, create a new branch named 
 feature/additional_requirements from  
@@ -85,7 +86,8 @@ kilometrage returned from the API, assuming:
   
 Using git, commit your work to branch 
 feature/additional_requirements and push to your remote repository. 
-  
+
+## Final  
 When you are finished your assignment:   
 Using git, create a new branch from feature/base_requirements named 
 final, create a single commit that contains all your work, and push to your 
@@ -94,11 +96,25 @@ remote repository.
 
 #  References
 
+## List and Master-Detail
 https://www.youtube.com/watch?v=Ey7VKG2fzaA
 https://fxstudio.dev/dynamic-list-swiftui-notes-39/
-https://spin.atomicobject.com/2015/12/23/swift-uipageviewcontroller-tutorial/
+
+## Button for next screen
 https://stackoverflow.com/questions/61236472/press-swiftui-button-and-go-to-the-next-screen-next-view-when-server-callback
+
+## API call
 https://www.youtube.com/watch?v=CimY_Sr3gWw
-MVVM https://www.youtube.com/watch?v=FwGMU_Grnf8 
-SWIFTUI VIEWS ETC https://www.youtube.com/@seanallen 
-TESTS https://www.youtube.com/watch?v=vfCm6zCHv44 
+
+## MVVM
+https://www.youtube.com/watch?v=FwGMU_Grnf8 
+https://developer.apple.com/forums/thread/699003
+
+## SwiftUI
+https://www.youtube.com/@seanallen 
+
+## Tests
+https://www.youtube.com/watch?v=vfCm6zCHv44 
+
+## Git
+https://stackoverflow.com/questions/5308816/how-can-i-merge-multiple-commits-onto-another-branch-as-a-single-squashed-commit
